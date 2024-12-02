@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.misagh</groupId>
+  <artifactId>bwquest</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>bwquest</name>
+
+  <properties>
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.4</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>andrei1058-repo</id>
+      <url>https://repo.andrei1058.dev/releases/</url>
+    </repository>
+    <repository>
+      <id>bedwars2023-releases</id>
+      <url>https://repo.tomkeuper.com/repository/releases/</url>
+    </repository>
+    <repository>
+      <id>spigot-repo</id>
+      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+    </repository>
+    <repository>
+      <id>andrei1058-releases</id>
+      <url>https://repo.andrei1058.dev/releases/</url>
+    </repository>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+
+  </repositories>
+
+  <dependencies>
+    <dependency>
+    <groupId>com.andrei1058.bedwars</groupId>
+    <artifactId>bedwars-api</artifactId>
+    <version>24.9</version>
+    </dependency>
+    <dependency>
+      <groupId>com.tomkeuper.bedwars</groupId>
+      <artifactId>bedwars-api</artifactId>
+      <version>1.2.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.spigotmc</groupId>
+      <artifactId>spigot-api</artifactId>
+      <version>1.8.8-R0.1-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.tomkeuper.bedwars</groupId>
+      <artifactId>proxy-api</artifactId>
+      <version>1.0</version>
+      <scope>system</scope>
+      <systemPath>C:/Users/Misagh1/IdeaProjects/bwquest/libs/proxy-plugin-1.0.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.github.MilkBowl</groupId>
+      <artifactId>VaultAPI</artifactId>
+      <version>1.7.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.andrei1058.bedwars</groupId>
+      <artifactId>proxy-api</artifactId>
+      <version>1.2.4</version>
+      <scope>system</scope>
+      <systemPath>C:/Users/Misagh1/IdeaProjects/bwquest/libs/proxy-plugin-1.2.4.jar</systemPath>
+    </dependency>
+  </dependencies>
+</project>

@@ -1,0 +1,20 @@
+#BedWars Quest Plugin
+#Set Rewards
+rewards:
+  final_kill: 150
+  bed_break: 150
+  win: 300
+  play: 100
+  buy: 50
+#Set Storage to Save Data of Players:
+#mysql - yaml (default set yaml)
+storage: "yaml"
+#mysql Setting
+mysql:
+  host: "localhost"
+  port: 3306
+  database: "bwquests"
+  user: "root"
+  password: "password"
+
+

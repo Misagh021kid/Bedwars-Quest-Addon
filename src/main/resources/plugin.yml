@@ -1,0 +1,13 @@
+name: bwquest
+version: 1.0
+main: com.misagh.bwquest.Bwquest
+prefix: BW-Quest
+load: POSTWORLD
+description: This Is an Addon for Bedwars Plugins
+depend:
+  - Vault
+commands:
+  bwr:
+    description: Reload Config of plugin
+  quests:
+    description: Open Gui For Quest
